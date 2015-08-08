@@ -13,6 +13,7 @@
 		90E7BE391B75AA1F00765728 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E7BE381B75AA1F00765728 /* Images.xcassets */; };
 		90E7BE3C1B75AA1F00765728 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E7BE3A1B75AA1F00765728 /* LaunchScreen.xib */; };
 		90E7BE481B75AA1F00765728 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE471B75AA1F00765728 /* OnTheMapTests.swift */; };
+		90E7BE551B75B0DD00765728 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE541B75B0DD00765728 /* UdacityClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		90E7BE411B75AA1F00765728 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7BE461B75AA1F00765728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E7BE471B75AA1F00765728 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
+		90E7BE541B75B0DD00765728 /* UdacityClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				90E7BE311B75AA1F00765728 /* AppDelegate.swift */,
-				90E7BE331B75AA1F00765728 /* LoginViewController.swift */,
 				90E7BE351B75AA1F00765728 /* Main.storyboard */,
+				90E7BE531B75B0AB00765728 /* Model */,
+				90E7BE511B75B08300765728 /* Controller */,
 				90E7BE381B75AA1F00765728 /* Images.xcassets */,
 				90E7BE3A1B75AA1F00765728 /* LaunchScreen.xib */,
 				90E7BE2F1B75AA1E00765728 /* Supporting Files */,
@@ -110,6 +113,23 @@
 				90E7BE461B75AA1F00765728 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90E7BE511B75B08300765728 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				90E7BE331B75AA1F00765728 /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		90E7BE531B75B0AB00765728 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90E7BE541B75B0DD00765728 /* UdacityClient.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +234,7 @@
 			files = (
 				90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */,
 				90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */,
+				90E7BE551B75B0DD00765728 /* UdacityClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
