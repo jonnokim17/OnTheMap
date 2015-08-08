@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Udacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sg-zl-hlY">
+                                <rect key="frame" x="219" y="113" width="162" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-Qx-uuq">
+                                <rect key="frame" x="16" y="252" width="568" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="x7g-3N-Toe"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EwZ-50-OLv">
+                                <rect key="frame" x="16" y="290" width="568" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Nmd-ta-ygQ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogd-xC-sw4">
+                                <rect key="frame" x="16" y="328" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BeI-Uo-Vhc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPk-me-cKK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L35-pw-2ak">
+                                <rect key="frame" x="16" y="428" width="568" height="33"/>
+                                <color key="backgroundColor" red="0.22352941176470589" green="0.31372549019607843" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Log in with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bh7-YF-Byc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c48-aB-m0P">
+                                <rect key="frame" x="16" y="384" width="568" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Don't Have an account? Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijQ-v7-ASG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="EwZ-50-OLv" secondAttribute="leading" id="4Bk-HS-Qqi"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="252" id="4Br-Tl-Mo9"/>
+                            <constraint firstItem="L35-pw-2ak" firstAttribute="top" secondItem="c48-aB-m0P" secondAttribute="bottom" constant="8" symbolic="YES" id="6bC-o4-yI0"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="centerX" secondItem="5Sg-zl-hlY" secondAttribute="centerX" id="D82-fQ-qtY"/>
+                            <constraint firstItem="5Sg-zl-hlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="EED-sT-EIJ"/>
+                            <constraint firstItem="EwZ-50-OLv" firstAttribute="top" secondItem="Fmg-Qx-uuq" secondAttribute="bottom" constant="8" symbolic="YES" id="F0y-eE-zJW"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="Ogd-xC-sw4" secondAttribute="trailing" id="H4O-yg-ZAV"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="L35-pw-2ak" secondAttribute="leading" id="LYe-UW-Kd3"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="L35-pw-2ak" secondAttribute="trailing" id="SVS-vf-guy"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="c48-aB-m0P" secondAttribute="trailing" id="Xfl-l8-p0s"/>
+                            <constraint firstItem="c48-aB-m0P" firstAttribute="top" secondItem="Ogd-xC-sw4" secondAttribute="bottom" constant="26" id="Xl5-ek-40b"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="EwZ-50-OLv" secondAttribute="trailing" id="YdI-G8-wHl"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="c48-aB-m0P" secondAttribute="leading" id="hba-AB-jgi"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ls1-NM-TXM"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="Ogd-xC-sw4" secondAttribute="leading" id="oum-s9-nQe"/>
+                            <constraint firstAttribute="centerX" secondItem="5Sg-zl-hlY" secondAttribute="centerX" id="p2q-lp-lnr"/>
+                            <constraint firstItem="Ogd-xC-sw4" firstAttribute="top" secondItem="EwZ-50-OLv" secondAttribute="bottom" constant="8" symbolic="YES" id="teL-7j-4af"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="EwZ-50-OLv" id="s5m-o9-SwX"/>
+                        <outlet property="usernameTextField" destination="Fmg-Qx-uuq" id="Jtz-tI-5Gy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
