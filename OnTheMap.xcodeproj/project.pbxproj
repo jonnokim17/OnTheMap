@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90728B901B768E700036A6E0 /* UdacityConstants.swift */; };
 		90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE311B75AA1F00765728 /* AppDelegate.swift */; };
 		90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE331B75AA1F00765728 /* LoginViewController.swift */; };
 		90E7BE371B75AA1F00765728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E7BE351B75AA1F00765728 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90728B901B768E700036A6E0 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
 		90E7BE2C1B75AA1E00765728 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7BE301B75AA1F00765728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E7BE311B75AA1F00765728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				90E7BE541B75B0DD00765728 /* UdacityClient.swift */,
+				90728B901B768E700036A6E0 /* UdacityConstants.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */,
+				90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */,
 				90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */,
 				90E7BE551B75B0DD00765728 /* UdacityClient.swift in Sources */,
 			);
@@ -432,6 +436,7 @@
 				90E7BE4D1B75AA1F00765728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90E7BE4E1B75AA1F00765728 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +445,7 @@
 				90E7BE501B75AA1F00765728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

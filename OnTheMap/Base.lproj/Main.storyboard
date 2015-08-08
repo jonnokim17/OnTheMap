@@ -79,11 +79,16 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijQ-v7-ASG"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wup-aq-lWJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="EwZ-50-OLv" secondAttribute="leading" id="4Bk-HS-Qqi"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="252" id="4Br-Tl-Mo9"/>
+                            <constraint firstAttribute="centerX" secondItem="wup-aq-lWJ" secondAttribute="centerX" id="5FG-hb-rUP"/>
+                            <constraint firstAttribute="centerY" secondItem="wup-aq-lWJ" secondAttribute="centerY" id="5dx-OF-FUC"/>
                             <constraint firstItem="L35-pw-2ak" firstAttribute="top" secondItem="c48-aB-m0P" secondAttribute="bottom" constant="8" symbolic="YES" id="6bC-o4-yI0"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="centerX" secondItem="5Sg-zl-hlY" secondAttribute="centerX" id="D82-fQ-qtY"/>
                             <constraint firstItem="5Sg-zl-hlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="EED-sT-EIJ"/>
@@ -102,6 +107,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wup-aq-lWJ" id="0mX-cy-DgE"/>
                         <outlet property="passwordTextField" destination="EwZ-50-OLv" id="s5m-o9-SwX"/>
                         <outlet property="usernameTextField" destination="Fmg-Qx-uuq" id="Jtz-tI-5Gy"/>
                     </connections>
