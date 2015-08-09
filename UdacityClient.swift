@@ -37,7 +37,6 @@ class UdacityClient: NSObject {
         let urlString = Constants.BaseURL + method
         let url = NSURL(string: urlString)!
         let request = NSMutableURLRequest(URL: url)
-        var jsonifyError: NSError? = nil
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -45,7 +44,6 @@ class UdacityClient: NSObject {
 
         let task = session.dataTaskWithRequest(request) {data, response, downloadError in
 
-            /* 5/6. Parse the data and use the data (happens in completion handler) */
             if let error = downloadError {
                 let newError = UdacityClient.errorForData(data, response: response, error: error)
                 completionHandler(result: nil, error: downloadError)
@@ -54,6 +52,35 @@ class UdacityClient: NSObject {
                 UdacityClient.parseJSONWithCompletionHandler(newData, completionHandler: completionHandler)
             }
         }
+        task.resume()
+
+        return task
+    }
+
+    func taskForStudentLocation(method: String, completionHandler: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionDataTask {
+
+        let methodParameters = [
+            "limit" : ParameterKeys.limit,
+//            "skip" : ParameterKeys.skip,
+//            "order" : ParameterKeys.order
+        ]
+
+        let urlString = Constants.ParseBaseURL + method + UdacityClient.escapedParameters(methodParameters)
+        let url = NSURL(string: urlString)!
+        let request = NSMutableURLRequest(URL: url)
+        var jsonifyError: NSError? = nil
+        request.addValue(Constants.ParseApplicationID, forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue(Constants.ParseRESTAPIKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
+
+        let task = session.dataTaskWithRequest(request) {data, response, downloadError in
+            if let error = downloadError {
+                let newError = UdacityClient.errorForData(data, response: response, error: error)
+                completionHandler(result: nil, error: downloadError)
+            } else {
+                UdacityClient.parseJSONWithCompletionHandler(data, completionHandler: completionHandler)
+            }
+        }
+
         task.resume()
 
         return task
@@ -95,5 +122,26 @@ class UdacityClient: NSObject {
         } else {
             completionHandler(result: parsedResult, error: nil)
         }
+    }
+
+    /* Helper function: Given a dictionary of parameters, convert to a string for a url */
+    class func escapedParameters(parameters: [String : AnyObject]) -> String {
+
+        var urlVars = [String]()
+
+        for (key, value) in parameters {
+
+            /* Make sure that it is a string value */
+            let stringValue = "\(value)"
+
+            /* Escape it */
+            let escapedValue = stringValue.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+
+            /* Append it */
+            urlVars += [key + "=" + "\(escapedValue!)"]
+
+        }
+
+        return (!urlVars.isEmpty ? "?" : "") + join("&", urlVars)
     }
 }

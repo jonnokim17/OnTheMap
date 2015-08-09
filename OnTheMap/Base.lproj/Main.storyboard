@@ -25,7 +25,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-Qx-uuq">
                                 <rect key="frame" x="16" y="252" width="568" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <connections>
@@ -34,7 +34,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EwZ-50-OLv">
                                 <rect key="frame" x="16" y="290" width="568" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
@@ -82,6 +82,13 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wup-aq-lWJ">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="udacity" translatesAutoresizingMaskIntoConstraints="NO" id="alV-9y-mFe">
+                                <rect key="frame" x="270" y="147" width="60" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Ssa-eH-fuy"/>
+                                    <constraint firstAttribute="width" constant="60" id="u0B-Tt-ZEm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -90,12 +97,14 @@
                             <constraint firstAttribute="centerX" secondItem="wup-aq-lWJ" secondAttribute="centerX" id="5FG-hb-rUP"/>
                             <constraint firstAttribute="centerY" secondItem="wup-aq-lWJ" secondAttribute="centerY" id="5dx-OF-FUC"/>
                             <constraint firstItem="L35-pw-2ak" firstAttribute="top" secondItem="c48-aB-m0P" secondAttribute="bottom" constant="8" symbolic="YES" id="6bC-o4-yI0"/>
+                            <constraint firstItem="Fmg-Qx-uuq" firstAttribute="top" secondItem="alV-9y-mFe" secondAttribute="bottom" constant="35" id="8sc-TN-UN2"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="centerX" secondItem="5Sg-zl-hlY" secondAttribute="centerX" id="D82-fQ-qtY"/>
                             <constraint firstItem="5Sg-zl-hlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="EED-sT-EIJ"/>
                             <constraint firstItem="EwZ-50-OLv" firstAttribute="top" secondItem="Fmg-Qx-uuq" secondAttribute="bottom" constant="8" symbolic="YES" id="F0y-eE-zJW"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="Ogd-xC-sw4" secondAttribute="trailing" id="H4O-yg-ZAV"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="leading" secondItem="L35-pw-2ak" secondAttribute="leading" id="LYe-UW-Kd3"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="L35-pw-2ak" secondAttribute="trailing" id="SVS-vf-guy"/>
+                            <constraint firstAttribute="centerX" secondItem="alV-9y-mFe" secondAttribute="centerX" id="TBa-Jb-SEu"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="c48-aB-m0P" secondAttribute="trailing" id="Xfl-l8-p0s"/>
                             <constraint firstItem="c48-aB-m0P" firstAttribute="top" secondItem="Ogd-xC-sw4" secondAttribute="bottom" constant="26" id="Xl5-ek-40b"/>
                             <constraint firstItem="Fmg-Qx-uuq" firstAttribute="trailing" secondItem="EwZ-50-OLv" secondAttribute="trailing" id="YdI-G8-wHl"/>
@@ -114,8 +123,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="681" y="367"/>
         </scene>
-        <!--Item 2-->
+        <!--List-->
         <scene sceneID="6V1-R7-CJH">
             <objects>
                 <viewController id="uSa-5Z-Gdh" sceneMemberID="viewController">
@@ -128,16 +138,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Sc8-nR-cUF"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="Sc8-nR-cUF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPo-Cx-gCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2865" y="698"/>
         </scene>
-        <!--Item 1-->
+        <!--Map-->
         <scene sceneID="37E-J0-pxh">
             <objects>
-                <viewController id="DyF-0v-71J" sceneMemberID="viewController">
+                <viewController id="DyF-0v-71J" customClass="MapViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1C-lL-M7K"/>
                         <viewControllerLayoutGuide type="bottom" id="Exj-vY-1db"/>
@@ -145,9 +155,26 @@
                     <view key="view" contentMode="scaleToFill" id="tFk-Ni-224">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P5i-8c-VRC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DyF-0v-71J" id="Hog-gB-XCs"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="P5i-8c-VRC" secondAttribute="bottom" id="4WH-bU-RDB"/>
+                            <constraint firstAttribute="trailing" secondItem="P5i-8c-VRC" secondAttribute="trailing" id="A5i-nd-7bK"/>
+                            <constraint firstItem="P5i-8c-VRC" firstAttribute="leading" secondItem="tFk-Ni-224" secondAttribute="leading" id="tt5-jF-D2V"/>
+                            <constraint firstItem="P5i-8c-VRC" firstAttribute="top" secondItem="tFk-Ni-224" secondAttribute="topMargin" id="yGm-n3-zBe"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="774-zq-gaK"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="774-zq-gaK"/>
+                    <connections>
+                        <outlet property="mapView" destination="P5i-8c-VRC" id="Adp-d4-wZo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecx-KT-4tM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,4 +217,9 @@
             <point key="canvasLocation" x="2045" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
+        <image name="udacity" width="256" height="256"/>
+    </resources>
 </document>

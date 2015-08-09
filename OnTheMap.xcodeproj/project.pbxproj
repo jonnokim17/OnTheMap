@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90728B901B768E700036A6E0 /* UdacityConstants.swift */; };
+		90C1ED701B76D79200C8B10C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C1ED6F1B76D79200C8B10C /* MapKit.framework */; };
+		90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1ED711B76D9EE00C8B10C /* Student.swift */; };
+		90DE7D181B76AA7F00B32986 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE7D171B76AA7F00B32986 /* MapViewController.swift */; };
 		90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE311B75AA1F00765728 /* AppDelegate.swift */; };
 		90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7BE331B75AA1F00765728 /* LoginViewController.swift */; };
 		90E7BE371B75AA1F00765728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E7BE351B75AA1F00765728 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		90728B901B768E700036A6E0 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
+		90C1ED6F1B76D79200C8B10C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		90C1ED711B76D9EE00C8B10C /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		90DE7D171B76AA7F00B32986 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		90E7BE2C1B75AA1E00765728 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7BE301B75AA1F00765728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E7BE311B75AA1F00765728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C1ED701B76D79200C8B10C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,7 @@
 				90E7BE531B75B0AB00765728 /* Model */,
 				90E7BE511B75B08300765728 /* Controller */,
 				90E7BE381B75AA1F00765728 /* Images.xcassets */,
+				90C1ED6F1B76D79200C8B10C /* MapKit.framework */,
 				90E7BE3A1B75AA1F00765728 /* LaunchScreen.xib */,
 				90E7BE2F1B75AA1E00765728 /* Supporting Files */,
 			);
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				90E7BE331B75AA1F00765728 /* LoginViewController.swift */,
+				90DE7D171B76AA7F00B32986 /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 			children = (
 				90E7BE541B75B0DD00765728 /* UdacityClient.swift */,
 				90728B901B768E700036A6E0 /* UdacityConstants.swift */,
+				90C1ED711B76D9EE00C8B10C /* Student.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -236,8 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */,
+				90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */,
 				90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */,
 				90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */,
+				90DE7D181B76AA7F00B32986 /* MapViewController.swift in Sources */,
 				90E7BE551B75B0DD00765728 /* UdacityClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +382,7 @@
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,6 +393,7 @@
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

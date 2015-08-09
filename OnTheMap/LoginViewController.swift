@@ -43,6 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.credentialFailAlert()
                     self.stopActivityIndicator()
                 }
+                print(result)
             }
         }
     }
