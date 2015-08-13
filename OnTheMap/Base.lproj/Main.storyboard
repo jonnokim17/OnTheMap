@@ -224,11 +224,17 @@
             </objects>
             <point key="canvasLocation" x="1347" y="367"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="T3G-lX-Wch">
             <objects>
-                <tabBarController id="Mei-je-XHv" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="IWe-V2-1Wo"/>
+                <tabBarController id="Mei-je-XHv" customClass="TabBarViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IWe-V2-1Wo">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Knq-dZ-AP8">
+                            <connections>
+                                <action selector="onLogout:" destination="Mei-je-XHv" id="lmB-g6-SbL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VBm-Za-16a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

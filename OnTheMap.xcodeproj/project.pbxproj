@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90728B901B768E700036A6E0 /* UdacityConstants.swift */; };
 		90A170381B7C365000E2D237 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A170371B7C365000E2D237 /* TableViewController.swift */; };
+		90A1703A1B7C456B00E2D237 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A170391B7C456B00E2D237 /* TabBarViewController.swift */; };
 		90C1ED701B76D79200C8B10C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C1ED6F1B76D79200C8B10C /* MapKit.framework */; };
 		90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1ED711B76D9EE00C8B10C /* Student.swift */; };
 		90DE7D181B76AA7F00B32986 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE7D171B76AA7F00B32986 /* MapViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		90728B901B768E700036A6E0 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
 		90A170371B7C365000E2D237 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		90A170391B7C456B00E2D237 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		90C1ED6F1B76D79200C8B10C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		90C1ED711B76D9EE00C8B10C /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		90DE7D171B76AA7F00B32986 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				90E7BE331B75AA1F00765728 /* LoginViewController.swift */,
+				90A170391B7C456B00E2D237 /* TabBarViewController.swift */,
 				90DE7D171B76AA7F00B32986 /* MapViewController.swift */,
 				90A170371B7C365000E2D237 /* TableViewController.swift */,
 			);
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A1703A1B7C456B00E2D237 /* TabBarViewController.swift in Sources */,
 				90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */,
 				90A170381B7C365000E2D237 /* TableViewController.swift in Sources */,
 				90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */,

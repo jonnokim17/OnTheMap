@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, TabBarViewControllerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
 
@@ -20,6 +20,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
         self.navigationController?.visibleViewController.title = "On The Map"
 
+        let tabBarVC = self.tabBarController as! TabBarViewController
+        tabBarVC.tabBarVCDelegate = self
+
+        getStudentData()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    func getStudentData() {
         UdacityClient.sharedInstance().taskForStudentLocation(UdacityClient.Methods.ParseMethod, completionHandler: { (result, error) -> Void in
             var resultsArray = result["results"] as! NSArray
 
@@ -39,13 +51,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
                 self.studentArray!.addObject(student)
             }
-
+            
         })
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //MARK: MKMapViewDelegate
@@ -74,11 +81,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
 
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        var center = view.annotation.coordinate
-        var coordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+//        var center = view.annotation.coordinate
+//        var coordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+//
+//        var coordinateRegion = MKCoordinateRegionMake(center, coordinateSpan)
+//        self.mapView .setRegion(coordinateRegion, animated: true)
+    }
 
-        var coordinateRegion = MKCoordinateRegionMake(center, coordinateSpan)
-        self.mapView .setRegion(coordinateRegion, animated: true)
+    //MARK: TabBarViewControllerDelegate
+    func tabBarRefresh() {
+        getStudentData()
     }
 
 }
