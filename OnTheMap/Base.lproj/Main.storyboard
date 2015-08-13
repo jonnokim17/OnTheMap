@@ -128,7 +128,7 @@
         <!--List-->
         <scene sceneID="6V1-R7-CJH">
             <objects>
-                <viewController id="uSa-5Z-Gdh" sceneMemberID="viewController">
+                <viewController id="uSa-5Z-Gdh" customClass="TableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RHh-Sf-7OA"/>
                         <viewControllerLayoutGuide type="bottom" id="1Ri-Rq-L7r"/>
@@ -136,9 +136,37 @@
                     <view key="view" contentMode="scaleToFill" id="WX9-ik-0ly">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-Ua-skc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ztf-nw-3Xx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ztf-nw-3Xx" id="sGM-fP-Dn5">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uSa-5Z-Gdh" id="nK1-iF-LG8"/>
+                                    <outlet property="delegate" destination="uSa-5Z-Gdh" id="DbA-sW-8Oh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ETa-Ua-skc" firstAttribute="top" secondItem="WX9-ik-0ly" secondAttribute="top" id="5wT-ez-4gG"/>
+                            <constraint firstAttribute="trailing" secondItem="ETa-Ua-skc" secondAttribute="trailing" id="GYN-Hs-i04"/>
+                            <constraint firstAttribute="bottom" secondItem="ETa-Ua-skc" secondAttribute="bottom" id="alA-dB-nr8"/>
+                            <constraint firstItem="ETa-Ua-skc" firstAttribute="leading" secondItem="WX9-ik-0ly" secondAttribute="leading" id="qqZ-Uz-BOd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list" id="Sc8-nR-cUF"/>
+                    <connections>
+                        <outlet property="tableView" destination="ETa-Ua-skc" id="K2W-XV-V11"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPo-Cx-gCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

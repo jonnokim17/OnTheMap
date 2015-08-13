@@ -13,6 +13,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
 
+    var studentArray: NSMutableArray?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         UdacityClient.sharedInstance().taskForStudentLocation(UdacityClient.Methods.ParseMethod, completionHandler: { (result, error) -> Void in
             var resultsArray = result["results"] as! NSArray
 
-            var studentArray: NSMutableArray = NSMutableArray()
+            self.studentArray = NSMutableArray()
 
             for dict in resultsArray {
                 var student: Student = Student(dictionary: dict as! NSDictionary)
@@ -35,7 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     self.mapView.addAnnotation(annoation)
                 }
 
-                studentArray.addObject(student)
+                self.studentArray!.addObject(student)
             }
 
         })

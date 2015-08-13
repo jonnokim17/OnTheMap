@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90728B901B768E700036A6E0 /* UdacityConstants.swift */; };
+		90A170381B7C365000E2D237 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A170371B7C365000E2D237 /* TableViewController.swift */; };
 		90C1ED701B76D79200C8B10C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C1ED6F1B76D79200C8B10C /* MapKit.framework */; };
 		90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1ED711B76D9EE00C8B10C /* Student.swift */; };
 		90DE7D181B76AA7F00B32986 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE7D171B76AA7F00B32986 /* MapViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		90728B901B768E700036A6E0 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
+		90A170371B7C365000E2D237 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		90C1ED6F1B76D79200C8B10C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		90C1ED711B76D9EE00C8B10C /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		90DE7D171B76AA7F00B32986 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A170361B7C351B00E2D237 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C1ED6F1B76D79200C8B10C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90E7BE231B75AA1E00765728 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +103,7 @@
 				90E7BE531B75B0AB00765728 /* Model */,
 				90E7BE511B75B08300765728 /* Controller */,
 				90E7BE381B75AA1F00765728 /* Images.xcassets */,
-				90C1ED6F1B76D79200C8B10C /* MapKit.framework */,
+				90A170361B7C351B00E2D237 /* Frameworks */,
 				90E7BE3A1B75AA1F00765728 /* LaunchScreen.xib */,
 				90E7BE2F1B75AA1E00765728 /* Supporting Files */,
 			);
@@ -130,6 +140,7 @@
 			children = (
 				90E7BE331B75AA1F00765728 /* LoginViewController.swift */,
 				90DE7D171B76AA7F00B32986 /* MapViewController.swift */,
+				90A170371B7C365000E2D237 /* TableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E7BE341B75AA1F00765728 /* LoginViewController.swift in Sources */,
+				90A170381B7C365000E2D237 /* TableViewController.swift in Sources */,
 				90C1ED721B76D9EE00C8B10C /* Student.swift in Sources */,
 				90728B911B768E700036A6E0 /* UdacityConstants.swift in Sources */,
 				90E7BE321B75AA1F00765728 /* AppDelegate.swift in Sources */,
