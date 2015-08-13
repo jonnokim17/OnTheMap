@@ -50,11 +50,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     //MARK: MKMapViewDelegate
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-        var center = view.annotation.coordinate
-        var coordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
 
-        var coordinateRegion = MKCoordinateRegionMake(center, coordinateSpan)
-        self.mapView .setRegion(coordinateRegion, animated: true)
+        var urlString = view.annotation.subtitle
+        if let urlString = urlString {
+            var url = NSURL(string: urlString)
+            UIApplication.sharedApplication().openURL(url!)
+        } else {
+            print("\(view.annotation.title) does not have URL")
+        }
     }
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -69,4 +72,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
         return pin
     }
+
+    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+        var center = view.annotation.coordinate
+        var coordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+
+        var coordinateRegion = MKCoordinateRegionMake(center, coordinateSpan)
+        self.mapView .setRegion(coordinateRegion, animated: true)
+    }
+
 }
